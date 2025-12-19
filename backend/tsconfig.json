@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "target": "ES2022",
+        "moduleDetection": "force",
+        "isolatedModules": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "EsNext",
+        "moduleResolution": "Bundler",
+        "rootDir": "./",
+        "paths": {
+            "#*": [
+                "./src/*"
+            ]
+        },
+        "outDir": "./dist"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules"
+    ]
+}
