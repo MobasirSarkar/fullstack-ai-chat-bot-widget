@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { ChatController } from "../controllers/chat";
+import { ChatController } from "../controllers/chat.js";
 
 export async function MessageHandler(
     req: Request,

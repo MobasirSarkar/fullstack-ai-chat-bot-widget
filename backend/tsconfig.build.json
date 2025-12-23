@@ -1,7 +1,16 @@
 {
     "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "esModuleInterop": true, // <--- ADD THIS LINE
+        "moduleResolution": "NodeNext", // <--- ENSURE THIS IS HERE TOO
+        "module": "NodeNext", // <--- AND THIS
+        "outDir": "./dist"
+    },
+    "include": [
+        "src/**/*"
+    ],
     "exclude": [
-        "**/*.test.ts",
-        "**/*.spec.ts"
+        "node_modules",
+        "**/*.test.ts"
     ]
 }

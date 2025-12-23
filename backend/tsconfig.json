@@ -1,23 +1,23 @@
 {
     "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "esModuleInterop": true,
         "skipLibCheck": true,
         "target": "ES2022",
-        "moduleDetection": "force",
-        "isolatedModules": true,
+        "moduleDetection": "force", // Good for modern TS
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "module": "EsNext",
-        "moduleResolution": "Bundler",
         "rootDir": "./",
+        "outDir": "./dist",
+        // Note: tsc does NOT rewrite paths. If you use "#", you must also add "imports" to package.json
         "paths": {
             "#*": [
                 "./src/*"
             ]
-        },
-        "outDir": "./dist"
+        }
     },
     "include": [
         "src/**/*"

@@ -6,8 +6,8 @@
     "type": "module",
     "scripts": {
         "dev": "tsx --watch --env-file .env src/index.ts",
-        "build": "rimraf dist && tsc -p tsconfig.build.json",
-        "start": "node ./dist/src/index.js",
+        "build": "rimraf dist && pnpm tsc -p tsconfig.build.json",
+        "start": "node --env-file .env ./dist/src/index.js",
         "dev:start": "tsx --watch --env-file .env.production src/index.ts"
     },
     "keywords": [],
@@ -21,6 +21,7 @@
         "express": "^5.2.1",
         "ioredis": "^5.8.2",
         "openai": "^6.15.0",
+        "rimraf": "^6.1.2",
         "zod": "^4.2.1"
     },
     "devDependencies": {
@@ -28,7 +29,6 @@
         "@types/cors": "^2.8.19",
         "@types/express": "^5.0.6",
         "@types/node": "^25.0.3",
-        "tsc": "^2.0.4",
         "tsx": "^4.21.0",
         "typescript": "^5.9.3"
     }
