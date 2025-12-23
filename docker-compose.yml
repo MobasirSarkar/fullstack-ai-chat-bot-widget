@@ -1,13 +1,15 @@
 services:
-  # app:
-  #   build: .
-  #   ports: ["3000:3000"]
-  #   environment:
-  #     - REDIS_URL=redis://cache:6379
-  #   depends_on:
-  #     - cache
-
-  # The Redis Cache
+  backend:
+    build: ./backend
+    container_name: backend_app
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MAX_TOKEN=${MAX_TOKEN}
+      - REDIS_URL=${REDIS_URL} 
+    restart: always
   cache:
     image: redis:latest
     ports:
